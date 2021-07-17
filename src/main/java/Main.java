@@ -11,7 +11,7 @@ public class Main {
         int answer = Arrays.stream(nums)
                 .boxed()
                 .collect(Collectors.collectingAndThen(Collectors.toSet()
-                        , p -> Integer.min(p.size(), nums.length)));
+                        , p -> Integer.min(p.size(), nums.length/2)));
 
         return answer;
     }
